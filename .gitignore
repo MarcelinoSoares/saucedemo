@@ -1,0 +1,36 @@
+# Dependências do Node.js
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+
+# Arquivos de configuração locais
+.env
+.env.local
+.env.*.local
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Relatórios de cobertura de testes
+coverage/
+*.lcov
+
+# Arquivos de build
+dist/
+build/
+
+# Arquivos de desenvolvimento
+.idea/
+
+# Outros arquivos temporários
+*.log
+*.tmp
+*.swp

@@ -1,0 +1,11 @@
+{
+  "validUser": {
+    "firstname": "John",
+    "lastname": "Doe",
+    "zipcode": "12345",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "role": "customer",
+    "description": "Usuário padrão com permissões básicas para navegar e comprar produtos."
+  }
+}

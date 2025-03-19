@@ -1,0 +1,47 @@
+{
+  "validUser": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "email": "standard_user@saucedemo.com"
+  },
+  "invalidUser": {
+    "username": "invalid_user",
+    "password": "invalid_password",
+    "email": "invalid_user@saucedemo.com"
+  },
+  "invalidPassword": {
+    "username": "standard_user",
+    "password": "invalid_password",
+    "email": "standard_user@saucedemo.com"
+  },
+  "invalidUsername": {
+    "username": "invalid_user",
+    "password": "secret_sauce",
+    "email": "invalid_user@saucedemo.com"
+  },
+  "emptyUsername" : {
+    "username": "",
+    "password": "secret_sauce",
+    "email": "empty_username@saucedemo.com"
+  },
+  "emptyPassword" : {
+    "username": "empty_password",
+    "password": "",
+    "email": "empty_password@saucedemo.com"
+  },
+"lockedOutUser": {
+  "username": "locked_out_user",
+  "password": "secret_sauce",
+  "email": "locked_out_user@saucedemo.com"
+},
+"problemUser": {
+  "username": "problem_user",
+  "password": "secret_sauce",
+  "email": "problem_user@saucedemo.com"
+},
+"performanceGlitchUser": {
+  "username": "performance_glitch_user",
+  "password": "secret_sauce",
+  "email": "performance_glitch_user@saucedemo.com"
+}
+}

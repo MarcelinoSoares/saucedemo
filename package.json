@@ -1,0 +1,15 @@
+{
+  "name": "saucedemo",
+  "version": "1.0.0",
+  "description": "Projeto de exemplo para Saucedemo",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "cypress": "^14.2.0",
+    "typescript": "^5.8.2"
+  }
+}
