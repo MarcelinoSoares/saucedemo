@@ -4,12 +4,19 @@
   "description": "Projeto de exemplo para Saucedemo",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
+    "test": "mocha --reporter mocha-allure-reporter",
     "test:open": "cypress open",
-    "build": "tsc"
+    "test:headless": "cypress run --headless",
+    "test:allure:open": "cypress open --reporter mocha-allure-reporter",
+    "test:allure:headless": "cypress run --headless --reporter mocha-allure-reporter",
+    "build": "tsc",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report"
   },
   "devDependencies": {
+    "allure-cypress": "^3.2.0",
     "cypress": "^14.2.0",
+    "mocha-allure-reporter": "^1.4.0",
     "typescript": "^5.8.2"
   }
 }

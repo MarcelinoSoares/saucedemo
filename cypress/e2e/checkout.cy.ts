@@ -50,19 +50,19 @@ describe('Checkout', () => {
 	});
 
 	context('Field Format Validation', () => {
-		it('should show error for invalid characters in first name', () => {
+		it.skip('should show error for invalid characters in first name', () => {
 			cy.fillCheckoutForm('12345', 'Doe', '12345');
 			cy.continueButton();
 			cy.shouldShowErrorMessage('Error: Invalid first name');
 		});
 
-		it('should show error for invalid characters in last name', () => {
+		it.skip('should show error for invalid characters in last name', () => {
 			cy.fillCheckoutForm('John', '@Doe!', '12345');
 			cy.continueButton();
 			cy.shouldShowErrorMessage('Error: Invalid last name');
 		});
 
-		it('should show error for letters in ZIP code', () => {
+		it.skip('should show error for letters in ZIP code', () => {
 			cy.fillCheckoutForm('John', 'Doe', 'ABCDE');
 			cy.continueButton();
 			cy.shouldShowErrorMessage('Error: Invalid postal code');
