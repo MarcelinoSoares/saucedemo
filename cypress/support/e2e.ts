@@ -17,6 +17,6 @@
 import './inputsCommands';
 import './buttonsCommands';
 import './expectsCommands';
-import 'allure-cypress';
+import '@shelex/cypress-allure-plugin';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

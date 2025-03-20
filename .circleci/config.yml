@@ -1,0 +1,29 @@
+version: 2.1
+jobs:
+  test:
+    docker:
+      - image: cimg/node:16-browsers
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - run:
+          name: Install Allure CLI
+          command: npm install -g allure-commandline
+      - run:
+          name: Run Cypress Tests
+          command: npx cypress run --env allure=true
+      - run:
+          name: Generate Allure Report
+          command: allure generate allure-results --clean -o allure-report
+          when: always
+      - store_artifacts:
+          path: allure-report
+          destination: allure-report
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
