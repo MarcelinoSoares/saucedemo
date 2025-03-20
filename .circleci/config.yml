@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: npm ci
+          command: npm install
       - run:
           name: Install Allure CLI
           command: npm install -g allure-commandline
