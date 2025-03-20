@@ -14,4 +14,9 @@ export default defineConfig({
 		screenshotOnRunFailure: true,
 		video: true,
 	},
+	reporter: 'junit',
+	reporterOptions: {
+		mochaFile: 'cypress/results/results-[hash].xml',
+		toConsole: true,
+	},
 });

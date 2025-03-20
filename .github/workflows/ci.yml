@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Cypress Tests with Allure Report
 
 on:
   push:
@@ -24,11 +24,33 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Run Cypress tests
-      - name: Run Cypress tests
-        run: npx cypress run
+      # Install Allure command-line tool
+      - name: Install Allure command-line
+        run: npm install -g allure-commandline
 
-      # Upload test results as an artifact (optional)
+      # Ensure results directory exists
+      - name: Ensure results directory exists
+        run: mkdir -p cypress/results
+
+      # Run Cypress tests with Allure integration
+      - name: Run Cypress tests with Allure
+        run: npx cypress run --env allure=true
+
+      # Generate Allure report
+      - name: Generate Allure report
+        if: always()
+        run: allure generate allure-results --clean -o allure-report
+
+      # Upload Allure report as an artifact
+      - name: Upload Allure report as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
+          retention-days: 30
+
+      # Upload test results as an artifact
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
