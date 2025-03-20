@@ -33,12 +33,11 @@ jobs:
       
       - name: Upload Allure report as artifact
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact
         with:
           name: allure-report
           path: allure-report
           retention-days: 30
-      
       # Optional: Publish to GitHub Pages
       - name: Deploy report to GitHub Pages
         if: always() && github.ref == 'refs/heads/main'
